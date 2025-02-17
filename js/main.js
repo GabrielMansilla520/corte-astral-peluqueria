@@ -4,42 +4,42 @@ const cuts = [
     id: 1,
     name: "Corte Clásico",
     description: "Un corte atemporal que nunca pasa de moda",
-    price: "25€",
+    price: "$---_",
     image: "https://doloritta.com/images2/corte-de-pelo-clasico/corte-de-pelo-clasico-99_8.jpg"
   },
   {
     id: 2,
     name: "Degradado Moderno",
     description: "Estilo urbano con transiciones suaves",
-    price: "30€",
+    price: "$---_",
     image: "https://cortesdepelohombres.com/wp-content/uploads/2021/10/28.-Low-fade-con-desvanecido-y-parte-trasera-en-punta-y-diseno-razor.jpg"
   },
   {
     id: 3,
     name: "Texturizado",
     description: "Corte con movimiento y volumen",
-    price: "35€",
+    price: "$---_",
     image: "https://st4allthings4p4ci.blob.core.windows.net/allthingshair/allthingshair/wp-content/uploads/sites/13/2023/03/14002720/corte-texturizado-10-756x1024.jpg"
   },
   {
     id: 4,
     name: "Undercut Moderno",
     description: "Estilo audaz y contemporáneo",
-    price: "40€",
+    price: "$---_",
     image: "https://tahecosmetics.com/trends/wp-content/uploads/2023/02/undercut-raya-lateral.jpg"
   },
   {
     id: 5,
     name: "Pompadour",
     description: "Clásico renovado con estilo actual",
-    price: "35€",
+    price: "$---_",
     image: "https://i0.wp.com/hairinmotion.co.uk/wp-content/uploads/2022/10/Corte-masculino-estilo-Pompadour-o-Tupe.jpg"
   },
   {
     id: 6,
     name: "Corte Ejecutivo",
     description: "Elegancia y profesionalismo",
-    price: "30€",
+    price: "$---_",
     image: "https://blog.newoldman.com.br/wp-content/uploads/2020/08/Corte-de-cabelo-masculino-social-Slick-Back-2.jpg"
   }
 ];
