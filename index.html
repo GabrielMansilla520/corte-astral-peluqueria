@@ -1,0 +1,262 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corte Astral | Peluquería</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="js/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <h1>Corte Astral</h1>
+      </div>
+      <nav class="nav">
+        <button class="menu-toggle" aria-label="Menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#inicio" class="active">Inicio</a></li>
+          <li><a href="#cortes">Cortes</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li>
+            <button class="btn-reserva gradient-bg scale-effect">
+              Ingresar
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="inicio" class="hero">
+        <div class="hero-content">
+          <h2>Estilo y Modernidad a tu Alcance</h2>
+          <p>Descubre nuestros cortes y vive la experiencia</p>
+          <a href="#cortes" class="cta-button">Ver Cortes</a>
+        </div>
+      </section>
+
+      <!-- Quick View Section -->
+      <section class="quick-view">
+        <div class="quick-view-item animate-on-scroll hover-lift">
+          <i class="fas fa-cut"></i>
+          <h3>Cortes Destacados</h3>
+          <p>Explora nuestros estilos más populares</p>
+          <a href="#cortes">Ver más</a>
+        </div>
+        <div class="quick-view-item animate-on-scroll hover-lift">
+          <i class="fas fa-images"></i>
+          <h3>Galería</h3>
+          <p>Inspírate con nuestros trabajos</p>
+          <a href="#galeria">Ver más</a>
+        </div>
+        <div class="quick-view-item animate-on-scroll hover-lift">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Ubicación</h3>
+          <p>Encuéntranos fácilmente</p>
+          <a href="#contacto">Ver mapa</a>
+        </div>
+      </section>
+
+      <!-- Cuts Section -->
+      <section id="cortes" class="cuts-section">
+        <h2 class="shimmer-effect">Nuestros Cortes</h2>
+        <div class="cuts-grid">
+          <!-- Cuts will be loaded dynamically -->
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="galeria" class="gallery-section">
+        <h2 class="shimmer-effect">Galería</h2>
+        <div class="gallery-grid">
+          <!-- Gallery items will be loaded dynamically -->
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contacto" class="contact-section">
+        <h2 class="shimmer-effect">Contacto</h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Información</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Calle Principal 123</p>
+            <p><i class="fas fa-phone"></i> +34 123 456 789</p>
+            <p><i class="fas fa-envelope"></i>email.ejemplo@gmail.com</p>
+
+            <div class="business-hours">
+              <h3>Horario</h3>
+              <p>Lunes a Viernes: 9:00 - 20:00</p>
+              <p>Sábados: 9:00 - 14:00</p>
+              <p>Domingos: Cerrado</p>
+            </div>
+
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Enviar</button>
+          </form>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            src="https://maps.google.com/maps?width=675&amp;height=527&amp;hl=en&amp;q=curuzu cuatia instituto superior&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Corte Astral</h3>
+          <p>Tu peluquería de confianza</p>
+        </div>
+        <div class="footer-section">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#cortes">Cortes</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Corte Astral. Todos los derechos reservados.</p>
+      </div>
+      <div class="developer-credit">Desarrollado por Paper Cross Software</div>
+    </footer>
+
+    <!-- Modal Template -->
+    <div class="modal" id="cutModal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-body">
+          <div class="modal-image">
+            <!-- Image will be loaded dynamically -->
+          </div>
+          <div class="modal-info">
+            <h3></h3>
+            <p class="description"></p>
+            <p class="price"></p>
+            <button class="btn-reserva gradient-bg scale-effect">
+              Reservar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New All Cuts Modal -->
+    <div class="modal all-cuts-modal" id="allCutsModal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h2>Todos Nuestros Cortes</h2>
+        <div class="all-cuts-grid">
+          <!-- Will be populated dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal login-modal" id="loginModal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h2>Acceso Administrador</h2>
+        <div class="form-group">
+          <input
+            type="password"
+            id="adminPassword"
+            placeholder="Contraseña"
+            minlength="8"
+            required
+          />
+          <div class="password-feedback"></div>
+        </div>
+        <button
+          id="loginSubmitBtn"
+          class="btn-reserva gradient-bg scale-effect"
+        >
+          Ingresar
+        </button>
+      </div>
+    </div>
+
+    <!-- Schedule Modal -->
+    <div class="modal schedule-modal" id="scheduleModal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h2>Agenda de Turnos</h2>
+        <div class="schedule-container">
+          <!-- Schedule will be rendered here -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loginSubmitBtn = document.getElementById("loginSubmitBtn");
+        if (loginSubmitBtn) {
+          loginSubmitBtn.addEventListener("click", function () {
+            window.validateLogin();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
