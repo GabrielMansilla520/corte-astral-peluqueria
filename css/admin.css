@@ -1,4 +1,3 @@
-
 .loader-overlay {
   position: fixed;
   top: 0;
@@ -334,9 +333,7 @@
 .schedule-modal h4,
 .schedule-modal p,
 .schedule-modal label {
-  color: var(
-    --text-color
-  ) !important; 
+  color: var(--text-color) !important;
 }
 
 .modal-content h2,
