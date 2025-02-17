@@ -122,6 +122,7 @@ function closeModal(modalElement) {
   }
 }
 
+// Render Cuts
 function renderCuts(limit = 3) {
   cutsGrid.innerHTML = '';
   
@@ -153,6 +154,7 @@ function renderCuts(limit = 3) {
     cutsGrid.appendChild(cutCard);
   });
 
+  // Add "Ver más" button if we're showing limited cuts
   if (limit && cuts.length > limit) {
     const verMasContainer = document.createElement('div');
     verMasContainer.className = 'ver-mas-container';
@@ -172,6 +174,7 @@ function renderCuts(limit = 3) {
   }
 }
 
+// Update renderAllCuts function to handle modal stacking
 function renderAllCuts() {
   const allCutsGrid = document.querySelector('.all-cuts-grid');
   allCutsGrid.innerHTML = '';
@@ -199,7 +202,7 @@ function renderAllCuts() {
     
     const reservaBtn = cutCard.querySelector('.btn-reserva');
     reservaBtn.addEventListener('click', (e) => {
-      e.stopPropagation(); 
+      e.stopPropagation(); // Prevent event bubbling
       openModal(cut);
     });
     
@@ -207,6 +210,7 @@ function renderAllCuts() {
   });
 }
 
+// Render Gallery
 function renderGallery() {
   gallery.forEach((image, index) => {
     const galleryItem = document.createElement('div');
@@ -217,6 +221,7 @@ function renderGallery() {
   });
 }
 
+// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -227,14 +232,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Form Handling
 const contactForm = document.querySelector('.contact-form');
 contactForm?.addEventListener('submit', (e) => {
   e.preventDefault();
-  
+  // Add form submission logic here
   alert('Mensaje enviado correctamente');
   contactForm.reset();
 });
 
+// Intersection Observer for animations
 const observerOptions = {
   threshold: 0.1
 };
@@ -251,6 +258,7 @@ document.querySelectorAll('section').forEach(section => {
   observer.observe(section);
 });
 
+// Enhanced animations for scroll
 const animateOnScroll = () => {
   const elements = document.querySelectorAll('.animate-on-scroll');
   
@@ -266,6 +274,7 @@ const animateOnScroll = () => {
 
 window.addEventListener('scroll', animateOnScroll);
 
+// Enhanced hover effects
 document.querySelectorAll('.gallery-item').forEach(item => {
   item.addEventListener('mousemove', (e) => {
     const { left, top, width, height } = item.getBoundingClientRect();
@@ -285,12 +294,14 @@ document.querySelectorAll('.gallery-item').forEach(item => {
   });
 });
 
+// Add parallax effect to hero section
 window.addEventListener('scroll', () => {
   const hero = document.querySelector('.hero');
   const scrolled = window.pageYOffset;
   hero.style.backgroundPositionY = `${scrolled * 0.5}px`;
 });
 
+// Enhance button interactions
 document.querySelectorAll('.btn-reserva').forEach(button => {
   button.addEventListener('mouseenter', (e) => {
     const x = e.clientX - button.getBoundingClientRect().left;
@@ -307,14 +318,15 @@ document.querySelectorAll('.btn-reserva').forEach(button => {
   });
 });
 
+// Import admin modules
 import { Auth } from './admin/auth.js';
 import { Scheduler } from './admin/scheduler.js';
 
+// Initialize admin features
 const auth = new Auth();
 const scheduler = new Scheduler();
 
-
-
+// Login and Admin Schedule Management
 const adminSchedule = {
   appointments: []
 };
@@ -377,21 +389,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Close modals when clicking outside
   document.querySelectorAll('.modal').forEach(modal => {
     modal.addEventListener('click', function(e) {
       if (e.target === this) {
         closeModal(this);
       }
-   });
+    });
   });
 
   // Handle ESC key to close modals in proper order
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       const activeModals = Array.from(document.querySelectorAll('.modal.active'));
-     if (activeModals.length > 0) {
-     // Close the last opened modal
-   closeModal(activeModals[activeModals.length - 1]);
+      if (activeModals.length > 0) {
+        // Close the last opened modal
+        closeModal(activeModals[activeModals.length - 1]);
       }
     }
   });
@@ -401,6 +414,12 @@ document.addEventListener('DOMContentLoaded', () => {
     loginBtn.addEventListener('click', window.openLoginModal);
   }
 });
+
+
+
+
+
+
 
 
 
@@ -415,12 +434,15 @@ function renderSchedule() {
     hours.push(`${i}:00`);
   }
 
+  // Clear existing content
   scheduleBody.innerHTML = '';
 
+  // Create header row
   const headerRow = document.createElement('tr');
   headerRow.innerHTML = '<th>Hora</th>' + days.map(day => `<th>${day}</th>`).join('');
   scheduleBody.appendChild(headerRow);
 
+  // Create time slots
   hours.forEach(hour => {
     const row = document.createElement('tr');
     row.innerHTML = `<td>${hour}</td>` + days.map(day => {
